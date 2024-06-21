@@ -36,56 +36,56 @@ graph LR
     subgraph File: dot2mermaid
         direction LR
         subgraph Class: DotParser
-                direction LR
-                node_22df8e62["62: _parse_legend_colors()"]:::leaf
-                node_5f8b35b1["44: _parse_subgraphs()"]:::filled
-                node_5497ea49["150: add_to_markdown()"]:::trunk
-                node_02ca0a3f["129: create_node_style()"]:::leaf
-                node_51d03dd9["118: edges_to_mermaid()"]:::filled
-                node_16523e49["77: get_edges()"]:::leaf
-                node_5c227bbb["74: get_subgraphs()"]:::filled
-                node_d13d141b["91: subgraphs_to_mermaid()"]:::filled
-                node_2dadf109["136: to_mermaid()"]:::trunk
+            direction LR
+            node_e87307ce["62: _parse_legend_colors()"]:::leaf
+            node_4ae5ed1a["44: _parse_subgraphs()"]:::filled
+            node_9e04e6af["151: add_to_markdown()"]:::trunk
+            node_1435b8f8["130: create_node_style()"]:::leaf
+            node_ba5c8ee4["119: edges_to_mermaid()"]:::filled
+            node_6fed536c["77: get_edges()"]:::leaf
+            node_c9b26d7f["74: get_subgraphs()"]:::filled
+            node_4c63ab74["91: subgraphs_to_mermaid()"]:::filled
+            node_c0357d7b["137: to_mermaid()"]:::trunk
         end
-        node_22df8e62["62: _parse_legend_colors()"]:::leaf
-        node_5f8b35b1["44: _parse_subgraphs()"]:::filled
-        node_5497ea49["150: add_to_markdown()"]:::trunk
-        node_02ca0a3f["129: create_node_style()"]:::leaf
-        node_51d03dd9["118: edges_to_mermaid()"]:::filled
-        node_16523e49["77: get_edges()"]:::leaf
-        node_5c227bbb["74: get_subgraphs()"]:::filled
-        node_d13d141b["91: subgraphs_to_mermaid()"]:::filled
-        node_2dadf109["136: to_mermaid()"]:::trunk
-        node_961733e1["20: get_dot()"]:::trunk
-        node_067f6587["9: read()"]:::leaf
-        node_873f0360["15: save()"]:::leaf
+        node_e87307ce["62: _parse_legend_colors()"]:::leaf
+        node_4ae5ed1a["44: _parse_subgraphs()"]:::filled
+        node_9e04e6af["151: add_to_markdown()"]:::trunk
+        node_1435b8f8["130: create_node_style()"]:::leaf
+        node_ba5c8ee4["119: edges_to_mermaid()"]:::filled
+        node_6fed536c["77: get_edges()"]:::leaf
+        node_c9b26d7f["74: get_subgraphs()"]:::filled
+        node_4c63ab74["91: subgraphs_to_mermaid()"]:::filled
+        node_c0357d7b["137: to_mermaid()"]:::trunk
+        node_3a20c0f3["20: get_dot()"]:::trunk
+        node_98f88cb0["9: read()"]:::leaf
+        node_ec40940c["15: save()"]:::leaf
     end
 
     %% Edges
-    node_5f8b35b1 --> node_22df8e62
-    node_5f8b35b1 --> node_5f8b35b1
-    node_5497ea49 --> node_067f6587
-    node_5497ea49 --> node_873f0360
-    node_51d03dd9 --> node_16523e49
-    node_5c227bbb --> node_5f8b35b1
-    node_d13d141b --> node_5c227bbb
-    node_2dadf109 --> node_02ca0a3f
-    node_2dadf109 --> node_51d03dd9
-    node_2dadf109 --> node_d13d141b
-    node_961733e1 --> node_067f6587
+    node_4ae5ed1a --> node_e87307ce
+    node_4ae5ed1a --> node_4ae5ed1a
+    node_9e04e6af --> node_98f88cb0
+    node_9e04e6af --> node_ec40940c
+    node_ba5c8ee4 --> node_6fed536c
+    node_c9b26d7f --> node_4ae5ed1a
+    node_4c63ab74 --> node_c9b26d7f
+    node_c0357d7b --> node_1435b8f8
+    node_c0357d7b --> node_ba5c8ee4
+    node_c0357d7b --> node_4c63ab74
+    node_3a20c0f3 --> node_98f88cb0
 
     %% Edge styles
-    linkStyle 0 stroke:#E69F00
-    linkStyle 1 stroke:#E69F00
-    linkStyle 2 stroke:#E69F00
-    linkStyle 3 stroke:#E69F00
-    linkStyle 4 stroke:#E69F00
-    linkStyle 5 stroke:#009E73
-    linkStyle 6 stroke:#009E73
-    linkStyle 7 stroke:#E69F00
-    linkStyle 8 stroke:#E69F00
-    linkStyle 9 stroke:#E69F00
-    linkStyle 10 stroke:#E69F00
+    linkStyle 0 stroke:#56B4E9
+    linkStyle 1 stroke:#56B4E9
+    linkStyle 2 stroke:#CC79A7
+    linkStyle 3 stroke:#CC79A7
+    linkStyle 4 stroke:#F0E442
+    linkStyle 5 stroke:#CC79A7
+    linkStyle 6 stroke:#F0E442
+    linkStyle 7 stroke:#009E73
+    linkStyle 8 stroke:#009E73
+    linkStyle 9 stroke:#009E73
+    linkStyle 10 stroke:#009E73
 
     %% Node styles
     classDef filled fill:#555555,stroke:#000000,stroke-width:2px;
