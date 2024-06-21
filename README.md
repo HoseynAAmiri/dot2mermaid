@@ -1,12 +1,12 @@
 # dot2mermaid
 
-A library that convers .dot file to mermaid and markdown.
+A library for converting dot file to mermaid and markdown.
 
 Requirements:
 
-- graphviz
-- code2flow
-- pygraphviz
+    - graphviz
+    - code2flow
+    - pygraphviz
 
 Windows users should install pygraphviz after graphviz by:
 ```bash
