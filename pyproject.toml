@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dot2mermaid"
+version = "0.1.0"
+description = ""
+authors = ["Hoseyn A. Amiri"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+code2flow = "^2.5.1"
+pygraphviz = "^1.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
