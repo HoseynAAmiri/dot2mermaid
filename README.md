@@ -34,55 +34,57 @@ parser.add_to_markdown('./README.md', markdown_content)  # to replace mermaid
 graph LR
     %% Subgraphs
     subgraph File: dot2mermaid
+        direction LR
         subgraph Class: DotParser
-            node_eb797174["62: _parse_legend_colors()"]:::leaf
-            node_1c8038fc["44: _parse_subgraphs()"]:::filled
-            node_3f7b9c44["149: add_to_markdown()"]:::trunk
-            node_f9f1c152["128: create_node_style()"]:::leaf
-            node_3208e0e0["117: edges_to_mermaid()"]:::filled
-            node_801bb883["77: get_edges()"]:::leaf
-            node_f0610ee1["74: get_subgraphs()"]:::filled
-            node_591e81b1["91: subgraphs_to_mermaid()"]:::filled
-            node_97d1ba45["135: to_mermaid()"]:::trunk
+                direction LR
+                node_22df8e62["62: _parse_legend_colors()"]:::leaf
+                node_5f8b35b1["44: _parse_subgraphs()"]:::filled
+                node_5497ea49["150: add_to_markdown()"]:::trunk
+                node_02ca0a3f["129: create_node_style()"]:::leaf
+                node_51d03dd9["118: edges_to_mermaid()"]:::filled
+                node_16523e49["77: get_edges()"]:::leaf
+                node_5c227bbb["74: get_subgraphs()"]:::filled
+                node_d13d141b["91: subgraphs_to_mermaid()"]:::filled
+                node_2dadf109["136: to_mermaid()"]:::trunk
         end
-        node_eb797174["62: _parse_legend_colors()"]:::leaf
-        node_1c8038fc["44: _parse_subgraphs()"]:::filled
-        node_3f7b9c44["149: add_to_markdown()"]:::trunk
-        node_f9f1c152["128: create_node_style()"]:::leaf
-        node_3208e0e0["117: edges_to_mermaid()"]:::filled
-        node_801bb883["77: get_edges()"]:::leaf
-        node_f0610ee1["74: get_subgraphs()"]:::filled
-        node_591e81b1["91: subgraphs_to_mermaid()"]:::filled
-        node_97d1ba45["135: to_mermaid()"]:::trunk
-        node_74fde869["20: get_dot()"]:::trunk
-        node_a7893f35["9: read()"]:::leaf
-        node_9f9b9383["15: save()"]:::leaf
+        node_22df8e62["62: _parse_legend_colors()"]:::leaf
+        node_5f8b35b1["44: _parse_subgraphs()"]:::filled
+        node_5497ea49["150: add_to_markdown()"]:::trunk
+        node_02ca0a3f["129: create_node_style()"]:::leaf
+        node_51d03dd9["118: edges_to_mermaid()"]:::filled
+        node_16523e49["77: get_edges()"]:::leaf
+        node_5c227bbb["74: get_subgraphs()"]:::filled
+        node_d13d141b["91: subgraphs_to_mermaid()"]:::filled
+        node_2dadf109["136: to_mermaid()"]:::trunk
+        node_961733e1["20: get_dot()"]:::trunk
+        node_067f6587["9: read()"]:::leaf
+        node_873f0360["15: save()"]:::leaf
     end
 
     %% Edges
-    node_1c8038fc --> node_eb797174
-    node_1c8038fc --> node_1c8038fc
-    node_3f7b9c44 --> node_a7893f35
-    node_3f7b9c44 --> node_9f9b9383
-    node_3208e0e0 --> node_801bb883
-    node_f0610ee1 --> node_1c8038fc
-    node_591e81b1 --> node_f0610ee1
-    node_97d1ba45 --> node_f9f1c152
-    node_97d1ba45 --> node_3208e0e0
-    node_97d1ba45 --> node_591e81b1
-    node_74fde869 --> node_a7893f35
+    node_5f8b35b1 --> node_22df8e62
+    node_5f8b35b1 --> node_5f8b35b1
+    node_5497ea49 --> node_067f6587
+    node_5497ea49 --> node_873f0360
+    node_51d03dd9 --> node_16523e49
+    node_5c227bbb --> node_5f8b35b1
+    node_d13d141b --> node_5c227bbb
+    node_2dadf109 --> node_02ca0a3f
+    node_2dadf109 --> node_51d03dd9
+    node_2dadf109 --> node_d13d141b
+    node_961733e1 --> node_067f6587
 
     %% Edge styles
-    linkStyle 0 stroke:#F0E442
-    linkStyle 1 stroke:#F0E442
-    linkStyle 2 stroke:#F0E442
-    linkStyle 3 stroke:#F0E442
-    linkStyle 4 stroke:#000000
-    linkStyle 5 stroke:#E69F00
-    linkStyle 6 stroke:#E69F00
-    linkStyle 7 stroke:#0072B2
-    linkStyle 8 stroke:#0072B2
-    linkStyle 9 stroke:#0072B2
+    linkStyle 0 stroke:#E69F00
+    linkStyle 1 stroke:#E69F00
+    linkStyle 2 stroke:#E69F00
+    linkStyle 3 stroke:#E69F00
+    linkStyle 4 stroke:#E69F00
+    linkStyle 5 stroke:#009E73
+    linkStyle 6 stroke:#009E73
+    linkStyle 7 stroke:#E69F00
+    linkStyle 8 stroke:#E69F00
+    linkStyle 9 stroke:#E69F00
     linkStyle 10 stroke:#E69F00
 
     %% Node styles

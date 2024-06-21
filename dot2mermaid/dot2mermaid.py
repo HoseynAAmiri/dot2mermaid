@@ -96,6 +96,7 @@ class DotParser:
             for subgraph, data in subgraph_data.items():
                 label = data['attributes'].get('label', subgraph)
                 result.append(" " * indent + f"subgraph {label}")
+                result.append(" " * 2 * indent + f"direction {self.direction}")
                 result.extend(subgraph_to_mermaid(
                     data['subgraphs'], indent + 4))
                 for node, attrs in data['nodes'].items():
@@ -107,7 +108,7 @@ class DotParser:
                         node_class = ":::leaf"
                     elif fillcolor == self.colors['trunk']:
                         node_class = ":::trunk"
-                    result.append(" " * (indent + 4) +
+                    result.append(" " * 2 * indent +
                                   f'{node}["{attrs["label"]}"]{node_class}')
                 result.append(" " * indent + "end")
             return result
