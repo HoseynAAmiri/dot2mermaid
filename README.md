@@ -32,59 +32,63 @@ parser.add_to_markdown('./README.md', markdown_content)  # to replace mermaid
 
 ```mermaid
 graph LR
-    %% Subgraphs 
+    %% Subgraphs
     subgraph File: dot2mermaid
         subgraph Class: DotParser
-            node_3fb2c4c4["61: _parse_legend_colors()"]:::leaf
-            node_e0f78b1b["43: _parse_subgraphs()"]:::filled
-            node_80f26d2d["143: add_to_markdown()"]:::trunk
-            node_3b2214c5["76: get_edges()"]:::leaf
-            node_36838d77["73: get_subgraphs()"]:::filled
-            node_3e889beb["90: subgraphs_to_mermaid()"]:::filled
-            node_e83bdddf["137: to_markdown()"]:::trunk
-            node_528d619b["116: to_mermaid()"]:::filled
+            node_eb797174["62: _parse_legend_colors()"]:::leaf
+            node_1c8038fc["44: _parse_subgraphs()"]:::filled
+            node_3f7b9c44["149: add_to_markdown()"]:::trunk
+            node_f9f1c152["128: create_node_style()"]:::leaf
+            node_3208e0e0["117: edges_to_mermaid()"]:::filled
+            node_801bb883["77: get_edges()"]:::leaf
+            node_f0610ee1["74: get_subgraphs()"]:::filled
+            node_591e81b1["91: subgraphs_to_mermaid()"]:::filled
+            node_97d1ba45["135: to_mermaid()"]:::trunk
         end
-        node_3fb2c4c4["61: _parse_legend_colors()"]:::leaf
-        node_e0f78b1b["43: _parse_subgraphs()"]:::filled
-        node_80f26d2d["143: add_to_markdown()"]:::trunk
-        node_3b2214c5["76: get_edges()"]:::leaf
-        node_36838d77["73: get_subgraphs()"]:::filled
-        node_3e889beb["90: subgraphs_to_mermaid()"]:::filled
-        node_e83bdddf["137: to_markdown()"]:::trunk
-        node_528d619b["116: to_mermaid()"]:::filled
-        node_0e6d2aa3["19: get_dot()"]:::trunk
-        node_80dbcb82["8: read()"]:::leaf
-        node_7467b54c["14: save()"]:::leaf
+        node_eb797174["62: _parse_legend_colors()"]:::leaf
+        node_1c8038fc["44: _parse_subgraphs()"]:::filled
+        node_3f7b9c44["149: add_to_markdown()"]:::trunk
+        node_f9f1c152["128: create_node_style()"]:::leaf
+        node_3208e0e0["117: edges_to_mermaid()"]:::filled
+        node_801bb883["77: get_edges()"]:::leaf
+        node_f0610ee1["74: get_subgraphs()"]:::filled
+        node_591e81b1["91: subgraphs_to_mermaid()"]:::filled
+        node_97d1ba45["135: to_mermaid()"]:::trunk
+        node_74fde869["20: get_dot()"]:::trunk
+        node_a7893f35["9: read()"]:::leaf
+        node_9f9b9383["15: save()"]:::leaf
     end
 
     %% Edges
-    node_e0f78b1b --> node_3fb2c4c4
-    node_e0f78b1b --> node_e0f78b1b
-    node_80f26d2d --> node_80dbcb82
-    node_80f26d2d --> node_7467b54c
-    node_36838d77 --> node_e0f78b1b
-    node_3e889beb --> node_36838d77
-    node_e83bdddf --> node_528d619b
-    node_528d619b --> node_3b2214c5
-    node_528d619b --> node_3e889beb
-    node_0e6d2aa3 --> node_80dbcb82
+    node_1c8038fc --> node_eb797174
+    node_1c8038fc --> node_1c8038fc
+    node_3f7b9c44 --> node_a7893f35
+    node_3f7b9c44 --> node_9f9b9383
+    node_3208e0e0 --> node_801bb883
+    node_f0610ee1 --> node_1c8038fc
+    node_591e81b1 --> node_f0610ee1
+    node_97d1ba45 --> node_f9f1c152
+    node_97d1ba45 --> node_3208e0e0
+    node_97d1ba45 --> node_591e81b1
+    node_74fde869 --> node_a7893f35
 
     %% Edge styles
-    linkStyle 0 stroke:#009E73
-    linkStyle 1 stroke:#009E73
-    linkStyle 2 stroke:#0072B2
-    linkStyle 3 stroke:#0072B2
-    linkStyle 4 stroke:#CC79A7
-    linkStyle 5 stroke:#009E73
-    linkStyle 6 stroke:#CC79A7
-    linkStyle 7 stroke:#009E73
-    linkStyle 8 stroke:#009E73
-    linkStyle 9 stroke:#009E73
+    linkStyle 0 stroke:#F0E442
+    linkStyle 1 stroke:#F0E442
+    linkStyle 2 stroke:#F0E442
+    linkStyle 3 stroke:#F0E442
+    linkStyle 4 stroke:#000000
+    linkStyle 5 stroke:#E69F00
+    linkStyle 6 stroke:#E69F00
+    linkStyle 7 stroke:#0072B2
+    linkStyle 8 stroke:#0072B2
+    linkStyle 9 stroke:#0072B2
+    linkStyle 10 stroke:#E69F00
 
-    %% Node styles         
-    classDef filled fill:#555555,stroke:#000000,stroke-width:2px;         
-    classDef leaf fill:#5555FF,stroke:#000000,stroke-width:2px;         
-    classDef trunk fill:#AA5555,stroke:#000000,stroke-width:2px;         
+    %% Node styles
+    classDef filled fill:#555555,stroke:#000000,stroke-width:2px;
+    classDef leaf fill:#5555FF,stroke:#000000,stroke-width:2px;
+    classDef trunk fill:#AA5555,stroke:#000000,stroke-width:2px;
 ```
 
 Compare it with code2flow png file:

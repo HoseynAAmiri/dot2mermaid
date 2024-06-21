@@ -1,8 +1,9 @@
-import pygraphviz as pgv
 import re
 import tempfile
 import os
+
 from code2flow import code2flow
+import pygraphviz as pgv
 
 
 def read(input_file):
@@ -113,9 +114,7 @@ class DotParser:
 
         return "\n".join(subgraph_to_mermaid(subgraphs))
 
-    def to_mermaid(self, colors=None) -> str:
-        colors = colors if colors else self.colors
-        subgraphs = self.subgraphs_to_mermaid()
+    def edges_to_mermaid(self) -> tuple[str, str]:
         edges = self.get_edges()
         edges_content = "    %% Edges"
         edge_style = "\n    %% Edge styles"
@@ -124,21 +123,28 @@ class DotParser:
             color = edge[1]['color']
             edge_style += f"\n    linkStyle {i} stroke:{color}"
 
-        mermaid_content = f"graph {self.direction}\n"
-        mermaid_content += "    %% Subgraphs \n" + \
-            subgraphs + 2 * "\n" + edges_content + "\n" + edge_style + "\n"
-        mermaid_content += "\n    %% Node styles \
-        \n    classDef filled fill:{},stroke:#000000,stroke-width:2px; \
-        \n    classDef leaf fill:{},stroke:#000000,stroke-width:2px; \
-        \n    classDef trunk fill:{},stroke:#000000,stroke-width:2px; \
-        ".format(colors['regular'], colors['leaf'], colors['trunk'])
-        return mermaid_content
+        return edges_content, edge_style
 
-    def to_markdown(self, colors=None) -> str:
-        markdown_content = "```mermaid\n"
-        markdown_content += self.to_mermaid(colors=colors)
-        markdown_content += "\n```"
-        return markdown_content
+    def create_node_style(self) -> str:
+        node_style = "\n    %% Node styles\n"
+        node_style += f"    classDef filled fill:{self.colors['regular']},stroke:#000000,stroke-width:2px;\n"
+        node_style += f"    classDef leaf fill:{self.colors['leaf']},stroke:#000000,stroke-width:2px;\n"
+        node_style += f"    classDef trunk fill:{self.colors['trunk']},stroke:#000000,stroke-width:2px;"
+        return node_style
+
+    def to_mermaid(self, colors=None) -> str:
+        subgraphs_content = self.subgraphs_to_mermaid()
+        edges_content, edge_style = self.edges_to_mermaid()
+        mermaid_content = f"graph {self.direction}\n"
+        mermaid_content += "    %% Subgraphs\n" + subgraphs_content + 2 * "\n"
+        mermaid_content += edges_content + "\n"
+        mermaid_content += edge_style + "\n"
+
+        if colors:
+            self.colors = colors
+
+        mermaid_content += self.create_node_style()
+        return mermaid_content
 
     def add_to_markdown(self, input_file, new_graph):
         content = read(input_file)
