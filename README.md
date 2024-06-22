@@ -13,7 +13,7 @@ Windows users should install pygraphviz after graphviz by:
 py -m pip install --use-pep517 --config-settings="--global-option=build_ext"  --config-settings="--global-option=-IC:\Program Files\Graphviz\include"  --config-settings="--global-option=-LC:\Program Files\Graphviz\lib" pygraphviz
 ```
 
-After proper installation, try:
+After proper installation, try the code below on a .md file that has the mermaid placeholder:
 
 ```python
 from dot2mermaid import DotParser, get_dot
